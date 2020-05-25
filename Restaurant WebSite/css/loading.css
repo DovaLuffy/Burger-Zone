@@ -1,0 +1,16 @@
+/* base */
+body {
+  background: black;
+}
+html {
+  height: 100%;
+}
+
+/* simpson image dimensions */
+
+img {
+  width: 50px;
+  height: 50px;
+  margin-left: 50%;
+  margin-top: 20%;
+}
