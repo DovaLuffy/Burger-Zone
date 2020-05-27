@@ -1,0 +1,40 @@
+.success {
+    color: #3c763d;
+    background: #dff0d8;
+    border: 1px solid #3c763d;
+    margin-bottom: 20px;
+    font-size: 15px;
+    text-align: left;
+    font-family: "Cormorant Garamond", serif;
+}
+
+.welcome-msg {
+    position: absolute;
+    font-family: "Bebas Neue", cursive;
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+    left: 10%;
+    top: 12%;
+    display: none;
+}
+
+@keyframes show {
+    from {
+        display: none;
+        opacity: 0;
+    }
+    to {
+        display: inline-block;
+        opacity: 1;
+    }
+}
+
+.animate {
+    display: block;
+    animation: showup 3s ease forwards;
+}
+
+.hide-alert {
+    display: none;
+}

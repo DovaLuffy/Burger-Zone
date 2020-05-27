@@ -1,0 +1,19 @@
+/* base */
+
+body {
+    background: black;
+}
+
+html {
+    height: 100%;
+}
+
+
+/* simpson image dimensions */
+
+img {
+    width: 100px;
+    height: 100px;
+    margin-left: 50%;
+    margin-top: 20%;
+}

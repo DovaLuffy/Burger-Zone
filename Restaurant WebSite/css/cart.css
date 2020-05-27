@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 5rem;
+  background: rgba(161, 84, 53, 0.432);
+  font-family: "Caladea", serif;
+}
+html {
+  font-size: 10px;
+}
+.container {
+  width: 100rem;
+  border: 2px solid white;
+  min-height: 80rem;
+  margin: 10rem auto;
+  border-radius: 10px;
+  margin-top: -5rem;
+}
+
+/* headers */
+.heading-tertiary {
+  font-size: 4rem;
+  margin-top: 4rem;
+  border-bottom: 3px solid black;
+  width: 85%;
+  font-family: "Anton", sans-serif;
+  margin-left: 8rem;
+}
+
+.left-side-header {
+  height: 80rem;
+  width: 100%;
+  background: url(./imgs/leftside.jpg);
+  background-size: cover;
+  background-position: center;
+  /* background-position-y: 100rem; */
+  filter: blur(3px);
+  /* clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%); */
+}
+
+.shopping-cart-header {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 5rem;
+  font-weight: 100;
+  font-family: "Anton", sans-serif;
+  margin-left: 8rem;
+}
+
+.heading-secondary {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: 200;
+  margin-left: 8rem;
+}
+/* item component */
+.item-card {
+  position: relative;
+  margin-top: 4rem;
+  background-color: white;
+  width: 100%;
+}
+.item-name {
+  position: absolute;
+  right: 30%;
+  top: 35%;
+  font-size: 2rem;
+}
+.item-picture {
+  margin-left: 2rem;
+}
+
+.check-out {
+  text-decoration: none;
+  padding: 2rem 3rem;
+  background-color: white;
+  color: black;
+  font-size: 2rem;
+  border: 2px solid black;
+  border-radius: 2.4rem;
+  position: absolute;
+  right: 20%;
+  bottom: -5%;
+  display: none;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 10;
+}
+.total-price {
+  position: absolute;
+  right: 20%;
+  font-size: 2rem;
+}
+.item-price {
+  position: absolute;
+  font-size: 2rem;
+  top: 35%;
+  right: 0;
+}
+
+/* layout */
+
+.left-side {
+  height: 80rem;
+  position: relative;
+  float: left;
+  width: 30%;
+}
+.right-side {
+  height: 80rem;
+  float: right;
+  width: 70%;
+  font-size: 4rem;
+  background: white;
+}
+
+/* random */
+img {
+  width: 14%;
+  max-height: 10%;
+}
+.show {
+  opacity: 1;
+  display: inline-block;
+  animation: show 3s ease;
+}
+
+/* buttons */
+
+.cart-add-btn {
+  position: absolute;
+  text-decoration: none;
+  padding: 1rem 3.5rem;
+  background-color: white;
+  color: black;
+  border-radius: 1rem;
+  right: 25rem;
+  transform: translateX(-30px);
+  border: 3px solid black;
+  font-size: 2rem;
+  transition: all 0.3s;
+}
+.cart-add-btn:hover,
+.check-out:hover {
+  color: white;
+  background: black;
+  border: 3px solid white;
+}
+/* alert css */
+.alert {
+  opacity: 0;
+  width: 26%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border: 2px solid black;
+  background-color: rgb(158, 33, 33);
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 27%;
+  right: 19%;
+  font-size: 1.5rem;
+  border-radius: 10%;
+  transition: all 1s ease;
+}
+.pop {
+  opacity: 1;
+  animation: pop 1s ease;
+}
+.un-pop {
+  opacity: 0;
+  animation: un-pop 1s ease;
+}
+
+/* Animations */
+@keyframes un-pop {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+    display: none;
+  }
+  to {
+    opacity: 1;
+    display: inline-block;
+  }
+}
+@keyframes pop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media  Queries */
+
+/* ipadpro */
+@media only screen and (max-width: 1024px) {
+  html {
+    font-size: 6.5px;
+  }
+  .container {
+    margin-top: 50rem;
+  }
+  .check-out {
+    bottom: 37%;
+  }
+}
+/* ipad */
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 6px;
+  }
+
+  .cart-add-btn {
+    right: 10rem;
+  }
+  .check-out {
+    bottom: 22%;
+    right: 12%;
+  }
+}
+
+/* iphone plus size */
+@media only screen and (max-width: 414px) {
+  html {
+    font-size: 4px;
+  }
+  .cart-add-btn {
+    right: -8rem;
+  }
+  .container {
+    margin-top: 50rem;
+  }
+  .check-out {
+    bottom: 28%;
+    right: 5%;
+  }
+}
+@media only screen and (max-width: 411px) {
+  .check-out {
+    bottom: 35%;
+    right: 5%;
+  }
+  @media only screen and (max-height: 731px) {
+    html {
+      font-size: 4px;
+    }
+    .cart-add-btn {
+      right: -9rem;
+    }
+    .container {
+      margin-top: 50rem;
+    }
+    .check-out {
+      bottom: 28%;
+      right: 5%;
+    }
+  }
+}
+/* iphone X and 6,7,8 */
+@media only screen and (max-width: 375px) {
+  html {
+    font-size: 3.5px;
+  }
+  .cart-add-btn {
+    right: -6rem;
+  }
+  .container {
+    margin-top: 50rem;
+  }
+  .check-out {
+    bottom: 30%;
+    right: 5%;
+  }
+  /* iphoneX */
+  @media only screen and (min-height: 812px) {
+    .check-out {
+      bottom: 42%;
+      right: 5%;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 3px;
+  }
+  .cart-add-btn {
+    right: -7rem;
+  }
+  .container {
+    margin-top: 50rem;
+  }
+}
+
+/* galaxy S edition */
+@media only screen and (max-height: 640px) {
+  html {
+    font-size: 3px;
+  }
+  .cart-add-btn {
+    right: 1rem;
+  }
+  .container {
+    margin-top: 50rem;
+  }
+}
+
+/* iphone se */
+@media only screen and (max-height: 568px) {
+  html {
+    font-size: 3px;
+  }
+  .cart-add-btn {
+    right: -9rem;
+  }
+  .container {
+    margin-top: 50rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  html {
+    font-size: 3px;
+  }
+  .cart-add-btn {
+    right: 0rem;
+  }
+  .container {
+    margin-top: 50rem;
+  }
+  .check-out {
+    bottom: 37%;
+    right: 12%;
+  }
+}
